@@ -27,5 +27,5 @@ jobs:
             target_branch: master
             build_dir: book
             keep_history: true
-         env:
-           GITHUB_TOKEN: ${{ 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}}
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
