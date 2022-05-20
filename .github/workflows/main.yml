@@ -1,5 +1,4 @@
 # This is a workflow to build and deploy the unravel project to Github Pages 
-name: rust project
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
@@ -8,16 +7,17 @@ on:
 
 jobs:
   build_and_test:
+    name: rust project
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
         - uses: actions-rs/tolchain@v1
-        with:
+          with:
             tolchain: stable
         - uses: actions-rs/cargo@v1
             with:
-                command: build
-                args: --release --all-features
+              command: build
+              args: --release --all-features
         - run: cargo install mdbook
         - run: mdbook build
         - name: rust project
