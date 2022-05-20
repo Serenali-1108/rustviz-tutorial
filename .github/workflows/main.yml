@@ -11,15 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
-        - uses: actions-rs/tolchain@v1
+        - uses: actions-rs/toolchain@v1
           with:
             tolchain: stable
         - uses: actions-rs/cargo@v1
             with:
               command: build
               args: --release --all-features
+        - run: mkdir -p build
+        - run: cp public/index.html build
         - run: cargo install mdbook
-        - run: mdbook build
+        - run: mdbook book
         - name: rust project
           if: success()
           uses: crazy-max/ghaction-github-pages@v2
