@@ -1,14 +1,10 @@
 # This is a workflow to build and deploy the unravel project to Github Pages 
-
 name: rust project
-
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  
-
 
 jobs:
   build_and_test:
@@ -24,12 +20,12 @@ jobs:
                 args: --release --all-features
         - run: cargo install mdbook
         - run: mdbook build
-    
-      if: success()
-      uses: crazy-max/ghaction-github-pages@v2
-      with:
-        target_branch: master
-        build_dir: book
-        keep_history: true
-#      env:
-#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - name: rust project
+          if: success()
+          uses: crazy-max/ghaction-github-pages@v2
+          with:
+            target_branch: master
+            build_dir: book
+            keep_history: true
+         env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
