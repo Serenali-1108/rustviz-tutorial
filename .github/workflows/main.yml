@@ -26,7 +26,7 @@ jobs:
           if: success()
           uses: crazy-max/ghaction-github-pages@v2
           with:
-            target_branch: master
+            target_branch: standalone
             build_dir: book
             keep_history: true
           env:
