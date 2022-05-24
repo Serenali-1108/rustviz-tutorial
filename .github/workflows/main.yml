@@ -14,10 +14,17 @@ jobs:
         - uses: actions-rs/toolchain@v1
           with:
             toolchain: stable
-        # - uses: actions-rs/cargo@v1
-            # with:
-            #   command: build
-            #   args: --release --all-features
+        - name: Checkout rustviz repo on current branch 
+          uses: actions/checkout@v2
+          with:
+            path: source
+        - name: Checkout rustviz tutorial repo on current branch
+          uses: actions/checkout@v2
+          with:
+            repository: rustviz
+            path: source
+        - run: cd rustviz
+        - run: sh copy_assets.sh
         - run: cp -rf assets book
         - run: cargo install mdbook
         - run: mdbook build
