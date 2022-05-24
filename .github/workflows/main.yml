@@ -1,32 +1,31 @@
-# This is a workflow to build and deploy the unravel project to Github Pages 
+# This is a workflow to build and deploy the rust project to Github Pages 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push request events but only for the master branch
   push:
     branches: [ master ]
 
 jobs:
-  build_and_test:
+  check:
     name: rust project
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
         - uses: actions-rs/toolchain@v1
           with:
-            tolchain: stable
-        - uses: actions-rs/cargo@v1
+            toolchain: stable
+        # - uses: actions-rs/cargo@v1
             # with:
             #   command: build
             #   args: --release --all-features
-        # - run: mkdir -p build
-        # - run: cp public/index.html build
+        - run: cp -rf assets book
         - run: cargo install mdbook
-        - run: mdbook book
+        - run: mdbook build
         - name: rust project
           if: success()
           uses: crazy-max/ghaction-github-pages@v2
           with:
-            target_branch: master
+            target_branch: gh-pages
             build_dir: book
             keep_history: true
           env:
