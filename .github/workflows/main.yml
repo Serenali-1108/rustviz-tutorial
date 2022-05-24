@@ -20,8 +20,8 @@ jobs:
             #   args: --release --all-features
         - run: mkdir -p build
         - run: cargo install mdbook
+        - run: cp book/motivation.html build
         - run: mdbook build
-        - run: cp public/index.html build
         - name: rust project
           if: success()
           uses: crazy-max/ghaction-github-pages@v2
