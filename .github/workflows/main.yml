@@ -16,12 +16,12 @@ jobs:
         - name: Checkout rustviz_tut repo on current branch 
           uses: actions/checkout@v2
           with:
-            path: rustviz
+            path: rustviz_tut
         - name: Checkout rustviz repo on current branch
           uses: actions/checkout@v2
           with:
             repository: rustviz/rustviz
-            path: rustviz_tut
+            path: rustviz
         - run: cd rustviz_tut
         - run: sh copy_assets.sh
         - run: cp -rf assets book
