@@ -34,7 +34,7 @@ printf "Copying files into modified_examples..."
 for DIR in ./src/assets/modified_examples/*; do
     BASENAME=`basename $DIR`
     echo $BASENAME
-    if [[ -f  "$EX/$BASENAME/source.rs" && -f "$EX/$BASENAME/vis_code.svg" && -f "$EX/$BASENAME/vis_timeline.svg" ]]
+    if [ -f  "$EX/$BASENAME/source.rs" && -f "$EX/$BASENAME/vis_code.svg" && -f "$EX/$BASENAME/vis_timeline.svg" ]
     then
         cp "$EX/$BASENAME/source.rs" "$DIR/source.rs" && \
         cp "$EX/$BASENAME/vis_code.svg" "$DIR/vis_code.svg" && \
