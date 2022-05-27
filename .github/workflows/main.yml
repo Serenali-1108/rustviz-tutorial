@@ -20,7 +20,7 @@ jobs:
         - name: Checkout rustviz repo on current branch
           uses: actions/checkout@v2
           with:
-            repository: rustviz/rustviz
+            repository: rustviz
             path: source
         - run: cd rustviz
         - run: sh copy_assets.sh
