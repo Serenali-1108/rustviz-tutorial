@@ -21,7 +21,7 @@ jobs:
           uses: actions/checkout@v2
           with:
             repository: rustviz/rustviz
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ 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 }}
             path: rustviz
         - run: cd rustviz_tut
         - run: sh copy_assets.sh
