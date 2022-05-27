@@ -13,11 +13,11 @@ jobs:
         - uses: actions-rs/toolchain@v1
           with:
             toolchain: stable
-         - name: Checkout rustviz repo on current branch 
+        - name: Checkout rustviz_tut repo on current branch 
           uses: actions/checkout@v2
           with:
             path: rustviz
-        - name: Checkout rustviz tutorial repo on current branch
+        - name: Checkout rustviz  repo on current branch
           uses: actions/checkout@v2
           with:
             repository: rustviz/rustviz
