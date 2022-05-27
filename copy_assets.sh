@@ -15,7 +15,7 @@ for DIR in $EX/*/; do
     echo $BASENAME
     printf "basename is $BASENAME\n"
     printf "dir is $DIR\n"
-    if [[ -f  $DIR/source.rs && -f $DIR/vis_code.svg && -f $DIR/vis_timeline.svg ]]
+    if [[ -f  "$DIR/source.rs" && -f "$DIR/vis_code.svg" && -f "$DIR/vis_timeline.svg" ]];
     then
         mkdir -p "./src/assets/code_examples/$BASENAME" && \
             cp "$DIR/source.rs" "./src/assets/code_examples/$BASENAME/source.rs" && \
