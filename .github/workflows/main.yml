@@ -16,13 +16,14 @@ jobs:
         - name: Checkout rustviz_tut repo on current branch 
           uses: actions/checkout@v2
           with:
-            path: rustviz_
+            path: rustviz_tut
         - name: Checkout rustviz  repo on current branch
           uses: actions/checkout@v2
           with:
             repository: rustviz/rustviz
-            path: rustviz_
-        - run: cd rustviz_
+            token: ${{ secrets.GITHUB_TOKEN }}
+            path: rustviz
+        - run: cd rustviz_tut
         - run: sh copy_assets.sh
         - run: cp -rf assets book
         - run: cargo install mdbook
