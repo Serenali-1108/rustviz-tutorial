@@ -10,6 +10,7 @@ jobs:
     name: rust project
     runs-on: ubuntu-latest
     steps:
+        - uses: actions/checkout@v2
         - uses: actions-rs/toolchain@v1
           with:
             toolchain: stable
@@ -21,7 +22,7 @@ jobs:
           uses: actions/checkout@v2
           with:
             repository: rustviz/rustviz
-            token: ${{ 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 }}
+            # token: ${{ secrets.GITHUB_TOKEN }}
             path: rustviz
         - run: cd rustviz_tut
         - run: sh copy_assets.sh
