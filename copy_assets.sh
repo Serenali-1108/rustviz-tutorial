@@ -13,7 +13,9 @@ EX=$RV/src/examples
 for DIR in $EX/*/; do
     BASENAME=`basename $DIR`
     echo $BASENAME
-    if ( -f  "$DIR/source.rs" && -f "$DIR/vis_code.svg" && -f "$DIR/vis_timeline.svg" )
+    printf "basename is $BASENAME\n"
+    printf "dir is $DIR\n"
+    if [[ -f  "$DIR/source.rs" && -f "$DIR/vis_code.svg" && -f "$DIR/vis_timeline.svg" ]]
     then
         mkdir -p "./src/assets/code_examples/$BASENAME" && \
             cp "$DIR/source.rs" "./src/assets/code_examples/$BASENAME/source.rs" && \
