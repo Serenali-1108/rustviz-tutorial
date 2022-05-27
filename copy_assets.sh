@@ -2,7 +2,9 @@
 
 # This is a convenience script to copy the code examples and corresponding SVG
 # visualizations from the rustviz repository. See README.md for more details.
+# RV='../rustviz'
 RV='rustviz'
+
 # printf "copying helper.js and book.js..."
 cp "$RV/rustviz_mdbook/mdbook_plugin/helpers.js"  "./helpers.js"
 cp "$RV/rustviz_mdbook/mdbook_plugin/book.js"  "./theme/book.js"
@@ -15,7 +17,7 @@ for DIR in $EX/*/; do
     echo $BASENAME
     printf "basename is $BASENAME\n"
     printf "dir is $DIR\n"
-    if [[ -f  "$DIR/source.rs" && -f "$DIR/vis_code.svg" && -f "$DIR/vis_timeline.svg" ]];
+    if [ -f  "$DIR/source.rs" && -f "$DIR/vis_code.svg" && -f "$DIR/vis_timeline.svg" ]
     then
         mkdir -p "./src/assets/code_examples/$BASENAME" && \
             cp "$DIR/source.rs" "./src/assets/code_examples/$BASENAME/source.rs" && \
