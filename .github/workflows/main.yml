@@ -22,7 +22,6 @@ jobs:
           with:
             repository: rustviz/rustviz
             path: source
-        - run: cd source
         - run: cd rustviz
         - run: sh copy_assets.sh
         - run: cp -rf assets book
