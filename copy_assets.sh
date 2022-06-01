@@ -45,4 +45,4 @@ for DIR in ./src/assets/modified_examples/*; do
 done
 printf "${green}done${END}\n"
 
-mdbook build
+# mdbook build
