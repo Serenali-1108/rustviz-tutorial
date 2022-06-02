@@ -30,8 +30,6 @@ const SVG = {
         "background: rgb(70, 70, 70, 0.6); color: white; z-index: 100; display: none;";
       page.parentNode.insertBefore(tooltip, page);
     }
-
-
   
     displayFn(classname);
     displayTooltip(tooltip, classname);
@@ -170,7 +168,8 @@ const SVG = {
           : SVG[tgt.tagName];
   
       // console.log(e_label);
-      
+      let LOGGING =  ;
+
       if (LOGGING){
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "/action/hover", true); // could add authentification info
