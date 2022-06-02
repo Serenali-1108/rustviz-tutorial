@@ -23,6 +23,7 @@ jobs:
           with:
             repository: rustviz/rustviz
             path: rustviz
+        - run: mkdir book
         - run: cd rustviz_tut
         - run: sh copy_assets.sh
         - run : cd src
