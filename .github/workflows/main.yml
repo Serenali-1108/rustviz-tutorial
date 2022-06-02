@@ -25,6 +25,7 @@ jobs:
             path: rustviz
         - run: cd rustviz_tut
         - run: sh copy_assets.sh
+        - run : cd src
         - run: cp -a assets/. book
         - run: cargo install mdbook
         - run: mdbook build
