@@ -168,7 +168,7 @@ const SVG = {
           : SVG[tgt.tagName];
   
       // console.log(e_label);
-      let LOGGING =  ;
+      // let LOGGING =  ;
 
       if (LOGGING){
         var xhr = new XMLHttpRequest();
