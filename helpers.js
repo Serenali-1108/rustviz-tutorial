@@ -168,6 +168,8 @@ const SVG = {
           : SVG[tgt.tagName];
   
       // console.log(e_label);
+      // import *  from 'githubLogging.js';
+      // import *  from 'EECS490Logging.js';
       // let LOGGING =  ;
 
       if (LOGGING){
