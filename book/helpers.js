@@ -168,20 +168,16 @@ const SVG = {
           : SVG[tgt.tagName];
   
       // console.log(e_label);
-      import *  from 'logging.js';
-      //  LOGGING =  ;
-
-      if (LOGGING){
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/action/hover", true); // could add authentification info
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.send(
-          JSON.stringify({
-            svg_name: e.currentTarget.ownerSVGElement.id,
-            hover_item: e_label
-          })
-        );
-      }
+  
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/action/hover", true); // could add authentification info
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(
+        JSON.stringify({
+          svg_name: e.currentTarget.ownerSVGElement.id,
+          hover_item: e_label
+        })
+      );
       // console.log(xhr);
   
       tooltip.style.display = "none";
