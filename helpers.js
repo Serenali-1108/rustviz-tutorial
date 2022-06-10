@@ -168,8 +168,7 @@ const SVG = {
           : SVG[tgt.tagName];
   
       // console.log(e_label);
-      import *  from 'logging.js';
-      //  LOGGING =  ;
+      import * as LOGGING from 'logging.js';
 
       if (LOGGING){
         var xhr = new XMLHttpRequest();
