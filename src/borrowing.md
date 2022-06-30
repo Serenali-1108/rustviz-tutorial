@@ -1,6 +1,5 @@
 # Borrowing
 
-1.
 In the previous section, we learned that each resource has a unique owner.
 Ownership can be moved—for example, into a function.
 
