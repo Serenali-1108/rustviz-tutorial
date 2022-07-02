@@ -146,8 +146,7 @@
                         <h3 id="optional-structs-in-rust"><a class="header" href="#optional-structs-in-rust">Optional: Structs in Rust</a></h3>
 <h4 id="creating-a-struct"><a class="header" href="#creating-a-struct">Creating a struct</a></h4>
 <p>To define a struct, we enter the keyword <code>struct</code> and name the entire struct. A struct’s name should describe the significance of the pieces of data being grouped together. Then, inside curly brackets, we define the names and types of the pieces of data, which we call <em>fields</em>. Here is an example showing a struct that stores information about a user account.</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>struct User {
     username: String,
@@ -158,8 +157,7 @@
 <span class="boring">}
 </span></code></pre></pre>
 <p>We create an instance by stating the name of the struct and then add curly brackets containing <code>key: value</code> pairs, where the keys are the names of the fields and the values are the data we want to store in those fields.  Then we can use dot field to obtain the value in a struct.</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>    let mut user1 = User {
         email: String::from(&quot;someone@example.com&quot;),
