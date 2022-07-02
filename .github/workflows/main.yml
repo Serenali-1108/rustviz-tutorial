@@ -23,8 +23,8 @@ jobs:
           with:
             repository: rustviz/rustviz
             path: rustviz
-        # - run: cd rustviz_tut
-        # - run: sh copy_assets.sh
+        - run: cd rustviz_tut
+        - run: sh copy_assets.sh
         - run: cargo install mdbook
         - run: mdbook build
         - name: rust project
